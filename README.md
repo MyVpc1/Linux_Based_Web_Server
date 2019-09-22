@@ -32,3 +32,7 @@ sudo service nginx restart
 ```
 Just open your browser and type http://localhost/
 ```
+### Let’s add the MySQL 8.0 into our apt repository running the below command:
+```bash
+wget –c https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+```
