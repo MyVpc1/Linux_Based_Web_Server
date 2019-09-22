@@ -37,6 +37,12 @@ Just open your browser and type http://localhost/
 wget –c https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
 ```
 ### Now configure the MySQL package using dpkg command:
-````bash
+
+```bash
 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+```
+### Run the below command to update the apt library and proceed with the MySQL 8.0 installation:
+```bash
+sudo apt-get update
+sudo apt-get install mysql-server -y
 ```
