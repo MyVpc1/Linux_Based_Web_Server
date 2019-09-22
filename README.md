@@ -46,3 +46,7 @@ sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
 sudo apt-get update
 sudo apt-get install mysql-server -y
 ```
+### Now, let’s secure the MySQL installation by running the following security script command:
+```bash
+sudo mysql_secure_installation
+```
