@@ -19,3 +19,7 @@ In this project, we will develop a Linux based web server that contains LEMP (Li
 sudo apt-get update
 sudo apt-get upgrade -y
 ```
+### Install the latest version of Nginx on Ubuntu using the following command:
+```bash
+sudo apt-get install nginx
+```
