@@ -28,3 +28,7 @@ sudo apt-get install nginx
 ```bash
 sudo service nginx restart
 ```
+### Run Nginx check :
+```
+Just open your browser and type http://localhost/
+```
