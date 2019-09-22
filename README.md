@@ -23,3 +23,8 @@ sudo apt-get upgrade -y
 ```bash
 sudo apt-get install nginx
 ```
+### Now run below command to restart nginx for the first time:
+
+```bash
+sudo service nginx restart
+```
