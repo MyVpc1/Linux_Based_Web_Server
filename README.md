@@ -36,3 +36,7 @@ Just open your browser and type http://localhost/
 ```bash
 wget –c https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
 ```
+### Now configure the MySQL package using dpkg command:
+````bash
+sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+```
