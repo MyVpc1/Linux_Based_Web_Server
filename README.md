@@ -3,3 +3,11 @@ In this project, we will develop a Linux based web server that contains LEMP (Li
 [Project Website Link](https://sites.google.com/view/lemp)
 
 ![Linux based web server lemp](https://i.imgur.com/DvpzFJ5.png?1)
+
+### Task List  
+1. Update Packages for Linux OS 
+2. Install NGINX
+3. Install MySQL
+4. Install PHP
+5. Congigure PHP
+6. Configure NGINX
