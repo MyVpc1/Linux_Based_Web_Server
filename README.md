@@ -32,10 +32,24 @@ sudo service nginx restart
 ```bash
 sudo ufw allow 'Nginx HTTP'
 ```
-###You can verify the change by running:
+### You can verify the change by running:
 ```bash
 sudo ufw status
 ```
+### This command’s output will show that HTTP traffic is allowed:
+```bash
+Output
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+Nginx HTTP                 ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+Nginx HTTP (v6)            ALLOW       Anywhere (v6)
+
+```
+
 ### Run Nginx check :
 ```bash
 Just open your browser and type http://localhost/
