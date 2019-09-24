@@ -60,3 +60,23 @@ sudo apt-get install mysql-server
 ```bash
 sudo mysql_secure_installation
 ```
+### Check MySQL
+```bash
+sudo mysql
+```
+### Next, check which authentication method each of your MySQL user accounts use with the following command:
+```sql
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
+### Output
+```sql
++------------------+-------------------------------------------+-----------------------+-----------+
+| user             | authentication_string                     | plugin                | host      |
++------------------+-------------------------------------------+-----------------------+-----------+
+| root             |                                           | auth_socket           | localhost |
+| mysql.session    | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
+| mysql.sys        | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
+| debian-sys-maint | *CC744277A401A7D25BE1CA89AFF17BF607F876FF | mysql_native_password | localhost |
++------------------+-------------------------------------------+-----------------------+-----------+
+
+```
