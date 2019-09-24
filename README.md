@@ -28,8 +28,12 @@ sudo apt-get install nginx
 ```bash
 sudo service nginx restart
 ```
-### Run Nginx check :
+### Enable HTTP for NGINX Server
+```bash
+sudo ufw allow 'Nginx HTTP'
 ```
+### Run Nginx check :
+```bash
 Just open your browser and type http://localhost/
 ```
 ### Let’s add the MySQL 8.0 into our apt repository running the below command:
