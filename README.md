@@ -47,9 +47,7 @@ OpenSSH                    ALLOW       Anywhere
 Nginx HTTP                 ALLOW       Anywhere
 OpenSSH (v6)               ALLOW       Anywhere (v6)
 Nginx HTTP (v6)            ALLOW       Anywhere (v6)
-
 ```
-
 ### Run Nginx check :
 ```bash
 Just open your browser and type http://localhost/
