@@ -80,3 +80,76 @@ SELECT user,authentication_string,plugin,host FROM mysql.user;
 +------------------+-------------------------------------------+-----------------------+-----------+
 
 ```
+### Exit form MySQL
+```mysql
+exit
+```
+### Install PHP for Processing
+```bash
+sudo add-apt-repository universe
+```
+### Install the php-fpm module along with an additional helper package, php-mysql.
+```bash
+sudo apt install php-fpm php-mysql
+```
+### Configure the PHP Processor
+```bash
+sudo nano /etc/php/7.0/fpm/php.ini
+```
+### We will change both of these conditions by uncommenting the line and setting it to "0" like this:
+```bash
+cgi.fix_pathinfo=0
+```
+### Now, we just need to restart our PHP processor by typing:
+```bash
+systemctl restart php7.0-fpm
+```
+### Configure Nginx to Use the PHP Processor
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
+##### By editing a new server block configuration file, rather than editing the default one, you’ll be able to easily restore the default configuration if you ever need to. Add the following content, which was taken and slightly modified from the default server block configuration file, to your new server block configuration file:
+
+```bash
+server {
+        listen 80;
+        root /var/www/html;
+        index index.php index.html index.htm index.nginx-debian.html;
+        server_name example.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        }
+
+        location ~ /\.ht {
+                deny all;
+        }
+}
+```
+### Set your configuration file for syntax errors by typing:
+```bash
+sudo nginx –t
+```
+### Reload Nginx to make the necessary changes:
+```bash
+sudo systemctl reload nginx
+```
+### Create a PHP File to Test Configuration:
+```bash
+ nano /var/www/html/info.php
+```
+### Type or paste the following lines into the new file. This is valid PHP code that will return information about our server:
+```php
+?php
+phpinfo();
+?
+```
+## Final Check :
+```url
+http://localhost/info.php
+```
