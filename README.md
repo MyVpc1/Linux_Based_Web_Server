@@ -32,6 +32,10 @@ sudo service nginx restart
 ```bash
 sudo ufw allow 'Nginx HTTP'
 ```
+###You can verify the change by running:
+```bash
+sudo ufw status
+```
 ### Run Nginx check :
 ```bash
 Just open your browser and type http://localhost/
