@@ -6,7 +6,7 @@ In this project, we will develop a Linux based web server that contains LEMP (Li
 
 ## Task List  
 1. Update Packages for Linux OS 
-2. Install NGINX
+2. Install The NGINX Web Server
 3. Install MySQL
 4. Install PHP
 5. Congigure PHP
