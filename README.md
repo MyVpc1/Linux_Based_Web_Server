@@ -153,3 +153,5 @@ phpinfo();
 ```url
 http://localhost/info.php
 ```
+
+![PHP Info page](https://i.imgur.com/PJIL5Hn.png?1)
